@@ -20,3 +20,25 @@ C:\Users\razva\OneDrive\Desktop\New folder\t\Medii de programare\BDFramework\BDF
 C:\Users\razva\OneDrive\Desktop\New folder\t\Medii de programare\BDFramework\BDFramework\obj\Debug\BDFramework.exe
 C:\Users\razva\OneDrive\Desktop\New folder\t\Medii de programare\BDFramework\BDFramework\obj\Debug\BDFramework.pdb
 C:\Users\razva\OneDrive\Desktop\New folder\t\Medii de programare\BDFramework\BDFramework\obj\Debug\BDFramework.Vanzare.resources
+D:\Management\BDFramework\bin\Debug\db.sqlite
+D:\Management\BDFramework\bin\Debug\BDFramework.exe.config
+D:\Management\BDFramework\bin\Debug\BDFramework.exe
+D:\Management\BDFramework\bin\Debug\BDFramework.pdb
+D:\Management\BDFramework\bin\Debug\EntityFramework.dll
+D:\Management\BDFramework\bin\Debug\EntityFramework.SqlServer.dll
+D:\Management\BDFramework\bin\Debug\System.Data.SQLite.dll
+D:\Management\BDFramework\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Management\BDFramework\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Management\BDFramework\bin\Debug\EntityFramework.xml
+D:\Management\BDFramework\bin\Debug\EntityFramework.SqlServer.xml
+D:\Management\BDFramework\bin\Debug\System.Data.SQLite.xml
+D:\Management\BDFramework\obj\Debug\BDFramework.csproj.AssemblyReference.cache
+D:\Management\BDFramework\obj\Debug\BDFramework.AddProduct.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.Form1.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.Properties.Resources.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.Vanzare.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.csproj.GenerateResource.cache
+D:\Management\BDFramework\obj\Debug\BDFramework.csproj.CoreCompileInputs.cache
+D:\Management\BDFramework\obj\Debug\BDFramew.41022477.Up2Date
+D:\Management\BDFramework\obj\Debug\BDFramework.exe
+D:\Management\BDFramework\obj\Debug\BDFramework.pdb
