@@ -33,13 +33,13 @@ namespace BDFramework
             }
         }
 
-        private void btnAdaugare_Click(object sender, EventArgs e)
+        private async Task btnAdaugare_Click(object sender, EventArgs e)
         {
             AddProduct addProduct = new AddProduct();
             addProduct.ShowDialog();
         }
 
-        private void dgvVizualizare_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async Task dgvVizualizare_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
 
@@ -59,7 +59,7 @@ namespace BDFramework
 
         }
 
-        private void btnCautare_Click(object sender, EventArgs e)
+        private async Task btnCautare_Click(object sender, EventArgs e)
         {
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
@@ -70,7 +70,7 @@ namespace BDFramework
             
         }
 
-        private void btnAfisare_Click(object sender, EventArgs e)
+        private async Task btnAfisare_Click(object sender, EventArgs e)
         {
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
@@ -88,7 +88,7 @@ namespace BDFramework
             }
         }
 
-        private void dgvFiltrare_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async Task dgvFiltrare_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
