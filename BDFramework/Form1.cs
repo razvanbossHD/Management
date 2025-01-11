@@ -33,16 +33,21 @@ namespace BDFramework
             }
         }
 
-        private async Task btnAdaugare_Click(object sender, EventArgs e)
+        private void btnAdaugare_Click(object sender, EventArgs e)
+        {
+            Task.Run(async () => await btnAdaugare());
+        }
+        private async Task btnAdaugare()
         {
             AddProduct addProduct = new AddProduct();
             addProduct.ShowDialog();
         }
-
-        private async Task dgvVizualizare_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvVizualizare_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-
+            Task.Run(async () => await dgvVizualizare_CellContent());
+        }
+        private async Task dgvVizualizare_CellContent()
+        {
             var idselected = dgvVizualizare.Rows[dgvVizualizare.CurrentCell.RowIndex].Cells[0].Value;
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
@@ -56,10 +61,13 @@ namespace BDFramework
                 }
 
             }
-
         }
-
-        private async Task btnCautare_Click(object sender, EventArgs e)
+        private void btnCautare_Click(object sender, EventArgs e)
+        {
+             Task.Run(async () => await dbtnCautare());
+            
+        }
+        private async Task dbtnCautare()
         {
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
@@ -67,10 +75,12 @@ namespace BDFramework
                 dgvVizualizare.DataSource = products.ToList();
 
             }
-            
         }
-
-        private async Task btnAfisare_Click(object sender, EventArgs e)
+        private void btnAfisare_Click(object sender, EventArgs e)
+        {
+            Task.Run(async () => await btnAfisare());
+        }
+         private async Task btnAfisare()
         {
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
@@ -87,8 +97,7 @@ namespace BDFramework
                 dgvVizualizare.DataSource = res.ToList();
             }
         }
-
-        private async Task dgvFiltrare_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvFiltrare_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
