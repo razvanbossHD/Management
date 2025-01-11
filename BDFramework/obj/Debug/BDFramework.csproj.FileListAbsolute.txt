@@ -42,3 +42,4 @@ D:\Management\BDFramework\obj\Debug\BDFramework.csproj.CoreCompileInputs.cache
 D:\Management\BDFramework\obj\Debug\BDFramew.41022477.Up2Date
 D:\Management\BDFramework\obj\Debug\BDFramework.exe
 D:\Management\BDFramework\obj\Debug\BDFramework.pdb
+D:\Management\BDFramework\obj\Debug\BDFramework.Login.resources

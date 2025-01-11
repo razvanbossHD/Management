@@ -64,7 +64,7 @@ namespace BDFramework
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
                 var produs = from p in ctx.Produse
-                            where p.Denumire.StartsWith(txtCautare.Text)
+                            where p.Denumire==txtCautare.Text
                             select p;
 
                 dgvVizualizare.DataSource = produs.ToList();
