@@ -35,9 +35,9 @@ namespace BDFramework
 
         private void btnAdaugare_Click(object sender, EventArgs e)
         {
-            Task.Run(async () => await btnAdaugare());
+            Task.Run(async () => await asyncAdaugare());
         }
-        private async Task btnAdaugare()
+        private async Task asyncAdaugare()
         {
             AddProduct addProduct = new AddProduct();
             addProduct.ShowDialog();
@@ -64,10 +64,10 @@ namespace BDFramework
         }
         private void btnCautare_Click(object sender, EventArgs e)
         {
-             Task.Run(async () => await dbtnCautare());
+             Task.Run(async () => await asyncCautare());
             
         }
-        private async Task dbtnCautare()
+        private async Task asyncCautare()
         {
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
@@ -78,9 +78,9 @@ namespace BDFramework
         }
         private void btnAfisare_Click(object sender, EventArgs e)
         {
-            Task.Run(async () => await btnAfisare());
+            Task.Run(async () => await asyncAfisare());
         }
-         private async Task btnAfisare()
+         private async Task asyncAfisare()
         {
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
