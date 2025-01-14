@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "D:\\Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|d:\\management\\bdframework\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|d:\\management\\bdframework\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|d:\\management\\bdframework\\conturi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\conturi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|d:\\management\\bdframework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\vanzare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\vanzare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\vanzare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\vanzare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\produs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\produs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|d:\\management\\bdframework\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|d:\\management\\bdframework\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|solutionrelative:bdframework\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C03A6495-9E66-4583-87FD-70051748840C}|BDFramework\\BDFramework.csproj|D:\\Management\\bdframework\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +66,109 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Vanzare.cs [Design]",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\Vanzare.cs",
+              "RelativeDocumentMoniker": "BDFramework\\Vanzare.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\Vanzare.cs [Design]",
+              "RelativeToolTip": "BDFramework\\Vanzare.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:16:50.266Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddProduct.cs",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\AddProduct.cs",
+              "RelativeDocumentMoniker": "BDFramework\\AddProduct.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\AddProduct.cs",
+              "RelativeToolTip": "BDFramework\\AddProduct.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:15:36.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddProduct.cs [Design]",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\AddProduct.cs",
+              "RelativeDocumentMoniker": "BDFramework\\AddProduct.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\AddProduct.cs [Design]",
+              "RelativeToolTip": "BDFramework\\AddProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:14:58.635Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Produs.cs",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\Produs.cs",
+              "RelativeDocumentMoniker": "BDFramework\\Produs.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\Produs.cs",
+              "RelativeToolTip": "BDFramework\\Produs.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T11:03:46.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\Form1.cs",
+              "RelativeDocumentMoniker": "BDFramework\\Form1.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\Form1.cs",
+              "RelativeToolTip": "BDFramework\\Form1.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T18:44:16.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\Login.cs",
+              "RelativeDocumentMoniker": "BDFramework\\Login.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\Login.cs",
+              "RelativeToolTip": "BDFramework\\Login.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAgwGgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T21:18:03.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Conturi.cs",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\Conturi.cs",
+              "RelativeDocumentMoniker": "BDFramework\\Conturi.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\Conturi.cs",
+              "RelativeToolTip": "BDFramework\\Conturi.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T20:58:50.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Vanzare.cs",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\Vanzare.cs",
+              "RelativeDocumentMoniker": "BDFramework\\Vanzare.cs",
+              "ToolTip": "D:\\Management\\BDFramework\\Vanzare.cs",
+              "RelativeToolTip": "BDFramework\\Vanzare.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:16:52.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\Management\\BDFramework\\Login.cs",
               "RelativeDocumentMoniker": "BDFramework\\Login.cs",
@@ -46,33 +180,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\Management\\BDFramework\\App.config",
+              "RelativeDocumentMoniker": "BDFramework\\App.config",
+              "ToolTip": "D:\\Management\\BDFramework\\App.config",
+              "RelativeToolTip": "BDFramework\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-14T15:54:57.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Management\\BDFramework\\Program.cs",
               "RelativeDocumentMoniker": "BDFramework\\Program.cs",
               "ToolTip": "D:\\Management\\BDFramework\\Program.cs",
               "RelativeToolTip": "BDFramework\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T19:08:40.083Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Management\\BDFramework\\Form1.cs",
-              "RelativeDocumentMoniker": "BDFramework\\Form1.cs",
-              "ToolTip": "D:\\Management\\BDFramework\\Form1.cs",
-              "RelativeToolTip": "BDFramework\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T18:44:16.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Management\\BDFramework\\Form1.cs",
               "RelativeDocumentMoniker": "BDFramework\\Form1.cs",

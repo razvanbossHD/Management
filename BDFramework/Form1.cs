@@ -17,6 +17,9 @@ namespace BDFramework
         public Form1()
         {
             InitializeComponent();
+            Login login = new Login();
+             
+            login.ShowDialog();
             using (ProdusDbContext ctx = new ProdusDbContext())
             {
                 var res = from s in ctx.Produse

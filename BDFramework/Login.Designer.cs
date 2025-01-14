@@ -34,6 +34,7 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblParola = new System.Windows.Forms.Label();
+            this.lblAfisare = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -45,6 +46,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUsername
             // 
@@ -71,6 +73,7 @@
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lblUsername
             // 
@@ -92,11 +95,21 @@
             this.lblParola.TabIndex = 5;
             this.lblParola.Text = "Password:";
             // 
+            // lblAfisare
+            // 
+            this.lblAfisare.AutoSize = true;
+            this.lblAfisare.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAfisare.Location = new System.Drawing.Point(309, 288);
+            this.lblAfisare.Name = "lblAfisare";
+            this.lblAfisare.Size = new System.Drawing.Size(0, 24);
+            this.lblAfisare.TabIndex = 6;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblAfisare);
             this.Controls.Add(this.lblParola);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnRegister);
@@ -118,5 +131,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblParola;
+        private System.Windows.Forms.Label lblAfisare;
     }
 }
