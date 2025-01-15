@@ -29,7 +29,24 @@ namespace BDFramework
             nrVanzare.Maximum = produs.Cantitate;
 
         }
-
+        public static void ComandaXML(Comanda comanda)
+        {
+            string name = "Comenzi.xml";
+            var dir = Directory.GetCurrentDirectory();
+            var file = Path.Combine(dir,name);
+            XDocument xdoc = new XDocument();
+            XElement root = new XElement("Comenzi");
+            if(File.Exists(file))
+                xdoc = XDocument.Load(file);
+            else
+                File.Create(file).Dispose();
+            XElement append = new XElement("ID",comanda.ID,
+                                           new XElement("Denumire",comanda.Denumire),
+                                           new XElement("Cantitate",comanda.Cantitate),
+                                           new XElement("Data",comanda.Data));
+            xdoc.Root.Add(append);
+            xdoc.Save(file);
+        }
 
         private void lblID_Click(object sender, EventArgs e)
         {
@@ -43,7 +60,23 @@ namespace BDFramework
                 lblRezultat.Visible = true;
                 lblRezultat.Text = "Au fost vandute " + produs.Cantitate + " Produse.";
                 produs.Cantitate -= (int)nrVanzare.Value;
+<<<<<<< Updated upstream
                 lblCantitate.Text = produs.Cantitate.ToString();
+=======
+                lblCantitate.Text = "Cantitate:" + produs.Cantitate.ToString();
+                if((int)nrVanzare.Value>0)
+                    using (ComandaDbContext ctx = new ComandaDbContext())
+                    {
+                        Comanda comanda = new Comanda();
+                        comanda.Denumire = produs.Denumire;
+                        comanda.Cantitate = (int)nrVanzare.Value;
+                        DateTime currentDateTime = DateTime.Now;
+                        comanda.Data = currentDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                        ctx.Comenzi.Add(comanda);
+                        ctx.SaveChanges();
+                        ComandaXML(comanda);
+                    }
+>>>>>>> Stashed changes
             }
             if(produs.Cantitate>0)
             {
@@ -71,5 +104,33 @@ namespace BDFramework
             }
 
         }
+<<<<<<< Updated upstream
+=======
+
+        private async Task adaugareAsync()
+        {
+            if (nrVanzare.Value > 0)
+            {
+                using (ComenziDbContext ctx = new ComenziDbContext())
+                {
+                    var produsnou = ctx.Produse.FirstOrDefault(o => o.Id == produs.Id);
+                    if (produsnou != null)
+                    {
+                        produsnou.Cantitate += (int)nrVanzare.Value;
+                        produs.Cantitate += (int)nrVanzare.Value;
+                    }
+                    ctx.SaveChanges();
+                }
+                lblRezultat.Text = "Au fost adaugate " + nrVanzare.Value.ToString() + " produse.";
+                lblCantitate.Text = "Cantitate:" + produs.Cantitate.ToString();
+                lblRezultat.Visible = true;
+
+            }
+        }
+        private async void btnAdaugare_Click(object sender, EventArgs e)
+        {
+            await adaugareAsync();
+        }
+>>>>>>> Stashed changes
     }
 }
