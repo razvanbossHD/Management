@@ -34,6 +34,7 @@
             this.lblCautare = new System.Windows.Forms.Label();
             this.txtCautare = new System.Windows.Forms.TextBox();
             this.btnAfisare = new System.Windows.Forms.Button();
+            this.btnComenzi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVizualizare)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +93,22 @@
             this.btnAfisare.UseVisualStyleBackColor = true;
             this.btnAfisare.Click += new System.EventHandler(this.btnAfisare_Click);
             // 
+            // btnComenzi
+            // 
+            this.btnComenzi.Location = new System.Drawing.Point(116, 97);
+            this.btnComenzi.Name = "btnComenzi";
+            this.btnComenzi.Size = new System.Drawing.Size(171, 76);
+            this.btnComenzi.TabIndex = 7;
+            this.btnComenzi.Text = "Comenzi";
+            this.btnComenzi.UseVisualStyleBackColor = true;
+            this.btnComenzi.Click += new System.EventHandler(this.btnComenzi_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnComenzi);
             this.Controls.Add(this.btnAfisare);
             this.Controls.Add(this.txtCautare);
             this.Controls.Add(this.lblCautare);
@@ -119,6 +131,7 @@
         private System.Windows.Forms.Label lblCautare;
         private System.Windows.Forms.TextBox txtCautare;
         private System.Windows.Forms.Button btnAfisare;
+        private System.Windows.Forms.Button btnComenzi;
     }
 }
 

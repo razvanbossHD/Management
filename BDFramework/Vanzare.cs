@@ -25,8 +25,7 @@ namespace BDFramework
             lblDescriere.Text = lblDescriere.Text + produs.Descriere.ToString();
             lblIntrare.Text = lblIntrare.Text + produs.DataIntrarii.ToString();
             lblIesire.Text = lblIesire.Text + produs.DataExpirarii.ToString();
-            lblCantitate.Text = lblCantitate.Text + produs.Cantitate.ToString();
-            nrVanzare.Maximum = produs.Cantitate;
+            lblCantitate.Text = "Cantitate:" + produs.Cantitate.ToString();
 
         }
 
@@ -41,13 +40,13 @@ namespace BDFramework
             if (nrVanzare.Value <= produs.Cantitate)
             {
                 lblRezultat.Visible = true;
-                lblRezultat.Text = "Au fost vandute " + produs.Cantitate + " Produse.";
+                lblRezultat.Text = "Au fost vandute " + nrVanzare.Value.ToString() + " produse.";
                 produs.Cantitate -= (int)nrVanzare.Value;
-                lblCantitate.Text = produs.Cantitate.ToString();
+                lblCantitate.Text = "Cantitate:" + produs.Cantitate.ToString();
             }
             if(produs.Cantitate>0)
             {
-                using (ProdusDbContext ctx = new ProdusDbContext())
+                using (ComenziDbContext ctx = new ComenziDbContext())
                 {
                     var produsnou = ctx.Produse.FirstOrDefault(o => o.Id == produs.Id);
                     if (produsnou != null)
@@ -56,10 +55,20 @@ namespace BDFramework
                     }
                     ctx.SaveChanges();
                 }
+                using (ComandaDbContext ctx = new ComandaDbContext())
+                {
+                    Comanda comanda = new Comanda();
+                    comanda.Denumire = produs.Denumire;
+                    comanda.Cantitate = (int)nrVanzare.Value;
+                    DateTime currentDateTime = DateTime.Now;
+                    comanda.Data = currentDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                    ctx.Comenzi.Add(comanda);
+                    ctx.SaveChanges();
+                }
             }
             else
             {
-                using (ProdusDbContext ctx = new ProdusDbContext())
+                using (ComenziDbContext ctx = new ComenziDbContext())
                 {
                     var produsdesters = ctx.Produse.FirstOrDefault(o => o.Id == produs.Id);
                     if (produsdesters != null)
@@ -70,6 +79,27 @@ namespace BDFramework
                 }
             }
 
+        }
+
+        private void btnAdaugare_Click(object sender, EventArgs e)
+        {
+            if(nrVanzare.Value >0)
+            {
+                using (ComenziDbContext ctx = new ComenziDbContext())
+                {
+                    var produsnou = ctx.Produse.FirstOrDefault(o => o.Id == produs.Id);
+                    if (produsnou != null)
+                    {
+                        produsnou.Cantitate += (int)nrVanzare.Value;
+                        produs.Cantitate += (int)nrVanzare.Value;
+                    }
+                    ctx.SaveChanges();
+                }
+                lblRezultat.Text = "Au fost adaugate " + nrVanzare.Value.ToString() + " produse.";
+                lblCantitate.Text = "Cantitate:" +produs.Cantitate.ToString();
+                lblRezultat.Visible = true;
+
+            }
         }
     }
 }

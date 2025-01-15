@@ -14,13 +14,19 @@ namespace BDFramework
 {
     public partial class Form1 : Form
     {
+        public int Nivel = 1;
         public Form1()
         {
             InitializeComponent();
-            Login login = new Login();
-             
+            Login login = new Login(this);
             login.ShowDialog();
-            using (ProdusDbContext ctx = new ProdusDbContext())
+
+            if(this.Nivel>0)
+            {
+                this.btnAdaugare.Visible = false;
+                this.btnComenzi.Visible = false;
+            }
+            using (ComenziDbContext ctx = new ComenziDbContext())
             {
                 var res = from s in ctx.Produse
                           select new
@@ -47,7 +53,7 @@ namespace BDFramework
             
 
             var idselected = dgvVizualizare.Rows[dgvVizualizare.CurrentCell.RowIndex].Cells[0].Value;
-            using (ProdusDbContext ctx = new ProdusDbContext())
+            using (ComenziDbContext ctx = new ComenziDbContext())
             {
                 Produs produs = ctx.Produse.Find(idselected);
                 if (produs != null) {
@@ -64,7 +70,7 @@ namespace BDFramework
 
         private void btnCautare_Click(object sender, EventArgs e)
         {
-            using (ProdusDbContext ctx = new ProdusDbContext())
+            using (ComenziDbContext ctx = new ComenziDbContext())
             {
                 var produs = from p in ctx.Produse
                             where p.Denumire==txtCautare.Text
@@ -78,7 +84,7 @@ namespace BDFramework
 
         private void btnAfisare_Click(object sender, EventArgs e)
         {
-            using (ProdusDbContext ctx = new ProdusDbContext())
+            using (ComenziDbContext ctx = new ComenziDbContext())
             {
                 var res = from s in ctx.Produse
                           select new
@@ -97,6 +103,22 @@ namespace BDFramework
         private void dgvFiltrare_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnComenzi_Click(object sender, EventArgs e)
+        {
+            using (ComandaDbContext ctx = new ComandaDbContext())
+            {
+                var res = from s in ctx.Comenzi
+                          select new
+                          {
+                              s.ID,
+                              s.Denumire,
+                              s.Cantitate,
+                              s.Data,
+                          };
+                dgvVizualizare.DataSource = res.ToList();
+            }
         }
     }
 }

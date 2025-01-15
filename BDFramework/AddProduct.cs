@@ -19,7 +19,7 @@ namespace BDFramework
 
         private void btnAdaugare_Click(object sender, EventArgs e)
         {
-            using (ProdusDbContext ctx = new ProdusDbContext()) {
+            using (ComenziDbContext ctx = new ComenziDbContext()) {
                 Produs p = new Produs();
                 p.Denumire = txtDenumire.Text;
                 p.Descriere = txtDescriere.Text;

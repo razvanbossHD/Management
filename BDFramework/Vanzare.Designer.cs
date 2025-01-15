@@ -37,6 +37,7 @@
             this.BtnVanzare = new System.Windows.Forms.Button();
             this.lblRezultat = new System.Windows.Forms.Label();
             this.nrVanzare = new System.Windows.Forms.NumericUpDown();
+            this.btnAdaugare = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nrVanzare)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +115,7 @@
             // lblRezultat
             // 
             this.lblRezultat.AutoSize = true;
-            this.lblRezultat.Location = new System.Drawing.Point(138, 210);
+            this.lblRezultat.Location = new System.Drawing.Point(205, 210);
             this.lblRezultat.Name = "lblRezultat";
             this.lblRezultat.Size = new System.Drawing.Size(46, 13);
             this.lblRezultat.TabIndex = 8;
@@ -123,16 +124,32 @@
             // 
             // nrVanzare
             // 
-            this.nrVanzare.Location = new System.Drawing.Point(11, 203);
+            this.nrVanzare.Location = new System.Drawing.Point(47, 203);
+            this.nrVanzare.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nrVanzare.Name = "nrVanzare";
             this.nrVanzare.Size = new System.Drawing.Size(120, 20);
             this.nrVanzare.TabIndex = 9;
+            // 
+            // btnAdaugare
+            // 
+            this.btnAdaugare.Location = new System.Drawing.Point(109, 233);
+            this.btnAdaugare.Name = "btnAdaugare";
+            this.btnAdaugare.Size = new System.Drawing.Size(75, 23);
+            this.btnAdaugare.TabIndex = 10;
+            this.btnAdaugare.Text = "adaugare";
+            this.btnAdaugare.UseVisualStyleBackColor = true;
+            this.btnAdaugare.Click += new System.EventHandler(this.btnAdaugare_Click);
             // 
             // Vanzare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 298);
+            this.Controls.Add(this.btnAdaugare);
             this.Controls.Add(this.nrVanzare);
             this.Controls.Add(this.lblRezultat);
             this.Controls.Add(this.BtnVanzare);
@@ -160,5 +177,6 @@
         private System.Windows.Forms.Button BtnVanzare;
         private System.Windows.Forms.Label lblRezultat;
         private System.Windows.Forms.NumericUpDown nrVanzare;
+        private System.Windows.Forms.Button btnAdaugare;
     }
 }

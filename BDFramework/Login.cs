@@ -19,6 +19,13 @@ namespace BDFramework
             InitializeComponent();
             this.FormClosing += MyForm_FormClosing;
         }
+        private Form1 mainForm = null;
+        public Login(Form callingForm)
+        {
+            mainForm = callingForm as Form1;
+            this.FormClosing += MyForm_FormClosing;
+            InitializeComponent();
+        }
 
         private void MyForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -104,6 +111,7 @@ namespace BDFramework
                         if (cont.Parola==output.ToString())
                         {
                             this.FormClosing -= MyForm_FormClosing;
+                            this.mainForm.Nivel=cont.Nivel;
                             this.Close();
                             this.FormClosing += MyForm_FormClosing;
                         }

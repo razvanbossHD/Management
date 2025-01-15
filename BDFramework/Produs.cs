@@ -19,9 +19,9 @@ namespace BDFramework
         public int Cantitate { get; set; }
 
     }
-    public class ProdusDbContext : DbContext
+    public class ComenziDbContext : DbContext
     {
-        public ProdusDbContext() : base("name=MagazinDbContext")
+        public ComenziDbContext() : base("name=MagazinDbContext")
         {}
 
         public DbSet<Produs> Produse { get; set; }
