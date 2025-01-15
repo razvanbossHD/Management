@@ -35,95 +35,100 @@ namespace BDFramework
             }
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private async Task registerAsync()
+        {
+            using (ConturiDbContext ctx = new ConturiDbContext())
+            {
+
+                Conturi c = new Conturi();
+                bool exists = ctx.Conturis
+                     .Any(f => f.Cont == txtUsername.Text);
+
+                if (exists)
+                {
+                    lblAfisare.Text = "Username-ul exista deja";
+                }
+                else
+                {
+                    c.Cont = txtUsername.Text;
+                    SHA256 sha256 = SHA256.Create();
+
+                    byte[] input = Encoding.UTF8.GetBytes(txtPassword.Text);
+                    byte[] hash = sha256.ComputeHash(input);
+
+                    StringBuilder output = new StringBuilder();
+
+                    foreach (byte b in hash)
+                    {
+                        output = output.Append(b.ToString("x2"));
+                    }
+
+                    c.Parola = output.ToString();
+                    c.Nivel = 0;
+
+                    ctx.Conturis.Add(c);
+                    ctx.SaveChanges();
+                    this.FormClosing -= MyForm_FormClosing;
+                    this.mainForm.Nivel = c.Nivel;
+                    this.Close();
+                    this.FormClosing += MyForm_FormClosing;
+                }
+
+
+            }
+        }
+
+        private async void btnRegister_Click(object sender, EventArgs e)
         {
             if (txtPassword.Text != "" && txtUsername.Text != "")
             {
-                using (ConturiDbContext ctx = new ConturiDbContext())
+                await registerAsync();
+            }
+        }
+
+        private async Task loginAsync()
+        {
+            using (ConturiDbContext ctx = new ConturiDbContext())
+            {
+                var cont = ctx.Conturis
+                    .FirstOrDefault(f => f.Cont == txtUsername.Text);
+
+                if (cont != null)
                 {
 
                     Conturi c = new Conturi();
-                    bool exists = ctx.Conturis
-                         .Any(f => f.Cont == txtUsername.Text);
 
-                    if (exists)
+                    c.Cont = txtUsername.Text;
+                    SHA256 sha256 = SHA256.Create();
+
+                    byte[] input = Encoding.UTF8.GetBytes(txtPassword.Text);
+                    byte[] hash = sha256.ComputeHash(input);
+
+                    StringBuilder output = new StringBuilder();
+
+                    foreach (byte b in hash)
                     {
-                        lblAfisare.Text = "Username-ul exista deja";
+                        output = output.Append(b.ToString("x2"));
                     }
-                    else
+                    c.Parola = output.ToString();
+                    if (cont.Parola == output.ToString())
                     {
-                        c.Cont=txtUsername.Text;
-                        SHA256 sha256 = SHA256.Create();
-
-                        byte[] input = Encoding.UTF8.GetBytes(txtPassword.Text);
-                        byte[] hash = sha256.ComputeHash(input);
-
-                        StringBuilder output = new StringBuilder();
-
-                        foreach (byte b in hash)
-                        {
-                            output = output.Append(b.ToString("x2"));
-                        }
-
-                        c.Parola = output.ToString();
-                        c.Nivel = 1;
-                        
-                        ctx.Conturis.Add(c);
-                        ctx.SaveChanges();
                         this.FormClosing -= MyForm_FormClosing;
+                        this.mainForm.Nivel = cont.Nivel;
                         this.Close();
                         this.FormClosing += MyForm_FormClosing;
                     }
 
-
                 }
+
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtPassword.Text != "" && txtUsername.Text != "")
             {
-                using (ConturiDbContext ctx = new ConturiDbContext())
-                {
-                    var cont = ctx.Conturis
-                        .FirstOrDefault(f => f.Cont == txtUsername.Text);
-
-                    if (cont != null)
-                    {
-
-                        Conturi c = new Conturi();
-
-                        c.Cont = txtUsername.Text;
-                        SHA256 sha256 = SHA256.Create();
-
-                        byte[] input = Encoding.UTF8.GetBytes(txtPassword.Text);
-                        byte[] hash = sha256.ComputeHash(input);
-
-                        StringBuilder output = new StringBuilder();
-
-                        foreach (byte b in hash)
-                        {
-                            output = output.Append(b.ToString("x2"));
-                        }
-                        c.Parola = output.ToString();
-                        c.Nivel = 1;
-                        if (cont.Parola==output.ToString())
-                        {
-                            this.FormClosing -= MyForm_FormClosing;
-                            this.mainForm.Nivel=cont.Nivel;
-                            this.Close();
-                            this.FormClosing += MyForm_FormClosing;
-                        }
-                        else { Console.WriteLine(cont.Parola+"\n"+c.Parola); }
-                        
-                    }
-                    else
-                    {
-                        Console.WriteLine("Person not found.");
-                    }
-
-                }
+                await loginAsync();
             }
         }
     }

@@ -40,7 +40,7 @@
             // 
             // btnAdaugare
             // 
-            this.btnAdaugare.Location = new System.Drawing.Point(544, 179);
+            this.btnAdaugare.Location = new System.Drawing.Point(534, 97);
             this.btnAdaugare.Name = "btnAdaugare";
             this.btnAdaugare.Size = new System.Drawing.Size(181, 76);
             this.btnAdaugare.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             // btnCautare
             // 
-            this.btnCautare.Location = new System.Drawing.Point(325, 179);
+            this.btnCautare.Location = new System.Drawing.Point(534, 179);
             this.btnCautare.Name = "btnCautare";
             this.btnCautare.Size = new System.Drawing.Size(177, 76);
             this.btnCautare.TabIndex = 3;
@@ -70,17 +70,19 @@
             // lblCautare
             // 
             this.lblCautare.AutoSize = true;
-            this.lblCautare.Location = new System.Drawing.Point(322, 112);
+            this.lblCautare.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCautare.Location = new System.Drawing.Point(362, 133);
             this.lblCautare.Name = "lblCautare";
-            this.lblCautare.Size = new System.Drawing.Size(44, 13);
+            this.lblCautare.Size = new System.Drawing.Size(75, 24);
             this.lblCautare.TabIndex = 4;
             this.lblCautare.Text = "Cautare";
             // 
             // txtCautare
             // 
-            this.txtCautare.Location = new System.Drawing.Point(384, 109);
+            this.txtCautare.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCautare.Location = new System.Drawing.Point(293, 170);
             this.txtCautare.Name = "txtCautare";
-            this.txtCautare.Size = new System.Drawing.Size(100, 20);
+            this.txtCautare.Size = new System.Drawing.Size(235, 35);
             this.txtCautare.TabIndex = 5;
             // 
             // btnAfisare

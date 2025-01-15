@@ -21,7 +21,7 @@ namespace BDFramework
             Login login = new Login(this);
             login.ShowDialog();
 
-            if(this.Nivel>0)
+            if (this.Nivel > 0)
             {
                 this.btnAdaugare.Visible = false;
                 this.btnComenzi.Visible = false;
@@ -48,41 +48,50 @@ namespace BDFramework
             addProduct.ShowDialog();
         }
 
-        private void dgvVizualizare_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async Task Vizualizareasync()
         {
-            
-
             var idselected = dgvVizualizare.Rows[dgvVizualizare.CurrentCell.RowIndex].Cells[0].Value;
             using (ComenziDbContext ctx = new ComenziDbContext())
             {
                 Produs produs = ctx.Produse.Find(idselected);
-                if (produs != null) {
-                    
-                    
+                if (produs != null)
+                {
+
+
                     Vanzare vanzare = new Vanzare(produs);
                     vanzare.ShowDialog();
-                
+
                 }
 
             }
-
         }
 
-        private void btnCautare_Click(object sender, EventArgs e)
+        private async void dgvVizualizare_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            await Vizualizareasync();
+        }
+
+        private async Task CautareAsync()
         {
             using (ComenziDbContext ctx = new ComenziDbContext())
             {
                 var produs = from p in ctx.Produse
-                            where p.Denumire==txtCautare.Text
-                            select p;
+                             where p.Denumire == txtCautare.Text
+                             select p;
 
                 dgvVizualizare.DataSource = produs.ToList();
 
             }
-            
+            return;
         }
 
-        private void btnAfisare_Click(object sender, EventArgs e)
+        private async void btnCautare_Click(object sender, EventArgs e)
+        {
+
+            await CautareAsync();
+
+        }
+        private async Task AfisareAsync()
         {
             using (ComenziDbContext ctx = new ComenziDbContext())
             {
@@ -100,12 +109,16 @@ namespace BDFramework
             }
         }
 
+        private async void btnAfisare_Click(object sender, EventArgs e)
+        {
+            await AfisareAsync();
+        }
+
         private void dgvFiltrare_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        private void btnComenzi_Click(object sender, EventArgs e)
+        private async Task ComenziAsync()
         {
             using (ComandaDbContext ctx = new ComandaDbContext())
             {
@@ -119,6 +132,11 @@ namespace BDFramework
                           };
                 dgvVizualizare.DataSource = res.ToList();
             }
+        }
+
+        private async void btnComenzi_Click(object sender, EventArgs e)
+        {
+            await ComenziAsync();
         }
     }
 }

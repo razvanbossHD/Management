@@ -17,9 +17,10 @@ namespace BDFramework
             InitializeComponent();
         }
 
-        private void btnAdaugare_Click(object sender, EventArgs e)
+        private async Task adaugareAsync()
         {
-            using (ComenziDbContext ctx = new ComenziDbContext()) {
+            using (ComenziDbContext ctx = new ComenziDbContext())
+            {
                 Produs p = new Produs();
                 p.Denumire = txtDenumire.Text;
                 p.Descriere = txtDescriere.Text;
@@ -29,7 +30,12 @@ namespace BDFramework
 
                 ctx.Produse.Add(p);
                 ctx.SaveChanges();
-             }
+            }
+        }
+
+        private async void btnAdaugare_Click(object sender, EventArgs e)
+        {
+            await adaugareAsync();
             this.Close();
         }
     }
