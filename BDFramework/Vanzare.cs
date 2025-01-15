@@ -41,7 +41,10 @@ namespace BDFramework
             if (File.Exists(file))
                 xdoc = XDocument.Load(file);
             else
-                File.Create(file).Dispose();
+            {
+            File.Create(file).Dispose();
+            xdoc.Add(root);
+            }
             XElement append = new XElement("ID", comanda.ID,
                                            new XElement("Denumire", comanda.Denumire),
                                            new XElement("Cantitate", comanda.Cantitate),
