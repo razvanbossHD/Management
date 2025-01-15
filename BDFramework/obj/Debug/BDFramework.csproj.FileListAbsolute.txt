@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\Users\razva\OneDrive\Desktop\New folder\t\Medii de programare\BDFramework\BDFramework\bin\Debug\db.sqlite
 C:\Users\razva\OneDrive\Desktop\New folder\t\Medii de programare\BDFramework\BDFramework\bin\Debug\BDFramework.exe.config
 C:\Users\razva\OneDrive\Desktop\New folder\t\Medii de programare\BDFramework\BDFramework\bin\Debug\BDFramework.exe
@@ -30,6 +31,8 @@ D:\Management\BDFramework\obj\Debug\BDFramework.csproj.GenerateResource.cache
 D:\Management\BDFramework\obj\Debug\BDFramework.csproj.CoreCompileInputs.cache
 D:\Management\BDFramework\obj\Debug\BDFramework.exe
 D:\Management\BDFramework\obj\Debug\BDFramework.pdb
+=======
+>>>>>>> Stashed changes
 D:\Management\BDFramework\bin\Debug\db.sqlite
 D:\Management\BDFramework\bin\Debug\BDFramework.exe.config
 D:\Management\BDFramework\bin\Debug\BDFramework.exe
@@ -42,6 +45,7 @@ D:\Management\BDFramework\bin\Debug\System.Data.SQLite.Linq.dll
 D:\Management\BDFramework\bin\Debug\EntityFramework.xml
 D:\Management\BDFramework\bin\Debug\EntityFramework.SqlServer.xml
 D:\Management\BDFramework\bin\Debug\System.Data.SQLite.xml
+<<<<<<< Updated upstream
 D:\Management\BDFramework\obj\Debug\BDFramew.41022477.Up2Date
 =======
 C:/Users/razva/OneDrive/Desktop/New folder/t/Medii de programare/BDFramework/BDFramework/bin/Debug/db.sqlite
@@ -91,4 +95,17 @@ D:/Management/BDFramework/obj/Debug/BDFramework.pdb
 D:/Management/BDFramework/obj/Debug/BDFramework.Login.resources
 /home/sheep/Documents/GitHub/Management/BDFramework/obj/Debug/BDFramework.exe
 /home/sheep/Documents/GitHub/Management/BDFramework/obj/Debug/BDFramework.pdb
+>>>>>>> Stashed changes
+=======
+D:\Management\BDFramework\obj\Debug\BDFramework.csproj.AssemblyReference.cache
+D:\Management\BDFramework\obj\Debug\BDFramework.AddProduct.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.Form1.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.Login.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.Properties.Resources.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.Vanzare.resources
+D:\Management\BDFramework\obj\Debug\BDFramework.csproj.GenerateResource.cache
+D:\Management\BDFramework\obj\Debug\BDFramework.csproj.CoreCompileInputs.cache
+D:\Management\BDFramework\obj\Debug\BDFramew.41022477.Up2Date
+D:\Management\BDFramework\obj\Debug\BDFramework.exe
+D:\Management\BDFramework\obj\Debug\BDFramework.pdb
 >>>>>>> Stashed changes
