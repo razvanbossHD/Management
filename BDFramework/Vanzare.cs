@@ -45,8 +45,7 @@ namespace BDFramework
             File.Create(file).Dispose();
             xdoc.Add(root);
             }
-            XElement append = new XElement("ID", comanda.ID,
-                                           new XElement("Denumire", comanda.Denumire),
+            XElement append = new XElement("Denumire", comanda.Denumire,
                                            new XElement("Cantitate", comanda.Cantitate),
                                            new XElement("Data", comanda.Data));
             xdoc.Root.Add(append);

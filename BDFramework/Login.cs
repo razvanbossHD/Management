@@ -64,7 +64,7 @@ namespace BDFramework
                     }
 
                     c.Parola = output.ToString();
-                    c.Nivel = 0;
+                    c.Nivel = 1;
 
                     ctx.Conturis.Add(c);
                     ctx.SaveChanges();
