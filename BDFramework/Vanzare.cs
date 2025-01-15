@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace BDFramework
 {
@@ -27,6 +29,25 @@ namespace BDFramework
             lblIesire.Text = lblIesire.Text + produs.DataExpirarii.ToString();
             lblCantitate.Text = "Cantitate:" + produs.Cantitate.ToString();
 
+        }
+
+        public static void ComandaXML(Comanda comanda)
+        {
+            string name = "Comenzi.xml";
+            var dir = Directory.GetCurrentDirectory();
+            var file = Path.Combine(dir, name);
+            XDocument xdoc = new XDocument();
+            XElement root = new XElement("Comenzi");
+            if (File.Exists(file))
+                xdoc = XDocument.Load(file);
+            else
+                File.Create(file).Dispose();
+            XElement append = new XElement("ID", comanda.ID,
+                                           new XElement("Denumire", comanda.Denumire),
+                                           new XElement("Cantitate", comanda.Cantitate),
+                                           new XElement("Data", comanda.Data));
+            xdoc.Root.Add(append);
+            xdoc.Save(file);
         }
 
 
@@ -53,6 +74,8 @@ namespace BDFramework
                         comanda.Data = currentDateTime.ToString("yyyy-MM-dd HH:mm:ss");
                         ctx.Comenzi.Add(comanda);
                         ctx.SaveChanges();
+                        comanda.ID = 0;
+                        ComandaXML(comanda);
                     }
             }
             if (produs.Cantitate > 0)
